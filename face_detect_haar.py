@@ -17,7 +17,7 @@ def main():
         (success, frame) = webcam.read()
         # convert frames to greyscale for algorithm
         to_greyscale = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-        face_coordinates = trained_data.detectMultiScale(to_greyscale, 1.05, 4, 0, [30, 30])
+        face_coordinates = trained_data.detectMultiScale(to_greyscale, 1.05, 4, 0, [20, 20])
         draw_rect(frame, face_coordinates)
         cv2.imshow('Face Detection', frame)
         key = cv2.waitKey(10)
